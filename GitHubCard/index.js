@@ -12,12 +12,10 @@ function fetchUser(username) {
       let cards = document.querySelector('.cards');
 
       cards.appendChild(component)
-      for(let i = 0; i <= followersArray.length; i++)
     })
    
 
 }
-
 
 
 /* Step 2: Inspect and study the data coming back, this is YOUR 
@@ -41,7 +39,10 @@ function fetchUser(username) {
           user, and adding that card to the DOM.
 */
 
-const followersArray = ['tetondan', 'dustinmyers', 'justsml', 'luishrd', 'bigknell'];
+const followersArray = ['Damilolawumi','tetondan', 'dustinmyers', 'justsml', 'luishrd', 'bigknell'];
+for(let i = 0; i <= followersArray.length; i++){
+  fetchUser(followersArray[i])
+}
 
 /* Step 3: Create a function that accepts a single object as its only argument,
           Using DOM methods and properties, create a component that will return the following DOM element:
@@ -75,20 +76,20 @@ const followersArray = ['tetondan', 'dustinmyers', 'justsml', 'luishrd', 'bigkne
 
 const userComponentCreator = function (userInfo) {
   const cardDiv = document.createElement('div');
-  cardDiv.classList.add('.card');
+  cardDiv.classList.add('card');
 
   const Image = document.createElement('img');
   Image.src = userInfo.avatar_url;
 
   const cardInfo = document.createElement('div');
-  cardInfo.classList.add('.card-info')
+  cardInfo.classList.add('card-info')
 
   const myH3 = document.createElement('h3')
-  myH3.classList.add('.name')
+  myH3.classList.add('name')
   myH3.textContent = userInfo.name;
 
   const userNameParagraph = document.createElement('p');
-  userNameParagraph.classList.add('.username');
+  userNameParagraph.classList.add('username');
   userNameParagraph.textContent = userInfo.login;
 
   const locationParagraph = document.createElement('p');
