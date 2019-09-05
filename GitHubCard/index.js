@@ -1,6 +1,7 @@
 /* Step 1: using axios, send a GET request to the following URL 
            (replacing the palceholder with your Github name):
            https://api.github.com/users/<your name>
+           https://api.github.com/users/Damilolawumi
 */
 
 /* Step 2: Inspect and study the data coming back, this is YOUR 
