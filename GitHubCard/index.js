@@ -3,6 +3,10 @@
            https://api.github.com/users/<your name>
            https://api.github.com/users/Damilolawumi
 */
+axios.get('https://api.github.com/users/Damilolawumi')
+  .then((response) => {
+    console.log(response.data)
+  })
 
 /* Step 2: Inspect and study the data coming back, this is YOUR 
    github info! You will need to understand the structure of this 
@@ -47,6 +51,8 @@ const followersArray = [];
 
 */
 
+
+
 /* List of LS Instructors Github username's: 
   tetondan
   dustinmyers
@@ -54,3 +60,32 @@ const followersArray = [];
   luishrd
   bigknell
 */
+
+const bioData = function (userInfo) {
+  const firstDiv = document.createElement('div');
+  firstDiv.classList.add('.card');
+
+  const Image = document.createElement('img');
+  Image.src = userInfo.avatar_url;
+
+  const secondDiv = document.createElement('div');
+  secondDiv.classList.add('.card-info')
+
+  const myH3 = document.createElement('h3')
+  myH3.classList.add('.name')
+  myH3.textContent = userInfo.name;
+
+  const firstParagraph = document.createElement('p');
+  firstParagraph.classList.add('.username');
+  firstParagraph.textContent = userInfo.login;
+
+  const secondParagraph = document.createElement('p');
+  secondParagraph.textContent = userInfo.location;
+
+  const thirdParagraph = document.createElement('p');
+  thirdParagraph.textContent = 'Profile:'
+
+const anchor = document.createElement('a');
+anchor.href = userInfo.html_url;
+
+}
